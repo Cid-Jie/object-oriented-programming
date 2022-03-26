@@ -48,6 +48,39 @@ class GarageCar
         return $this->energyLevel;
     }
 
+     //Set function
+     public function setNbWheels():int
+     {
+         return $this->nbWheels;
+     }
+ 
+     public function setCurrentSpeed():int
+     {
+        if($currentSpeed >= 0){
+            $this->currentSpeed= $currentSpeed;
+        }
+     }
+ 
+     public function setColor():string
+     {
+         return $this->color;
+     }
+ 
+     public function setNbSeats():int
+     {
+         return $this->nbSeats;
+     }
+ 
+     public function setEnergy():string
+     {
+         return $this->energy;
+     }
+ 
+     public function setEnergyLevel():int
+     {
+         return $this->energyLevel;
+     }
+
     //Function to start the car
     public function startUp():string
     {

@@ -54,13 +54,27 @@ class Bicycle
         
     }
 
+    public function setGarageDoor():bool
+    {
+        return $this->garageDoor;
+    }
+
+    public function setNbSeats():int
+    {
+        return $this->nbSeats;
+    }
+
+    public function setNbWheels():string
+    {
+        return $this->nbWheels;
+    }
+
     //Function to forward the bike
     public function forward():string 
     {
         $this->currentSpeed = 15;
         return "Go !";
     }
-
 
     //Function to stop the bike
     public function brake():string
