@@ -5,12 +5,12 @@ class GarageCar
     private int $nbWheels = 4;
     private int $currentSpeed;
     private string $color;
-    private int $nbSeats= 4;
+    private int $nbSeats;
     private string $energy;
     private int $energyLevel;
 
     //Constructor
-    public function __constructor(string $color, int $nbSeats, string $energy)
+    public function __construct(string $color, int $nbSeats, string $energy)
     {
         $this->color = $color;
         $this->nbSeats = $nbSeats;

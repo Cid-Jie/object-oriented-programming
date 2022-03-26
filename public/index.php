@@ -13,7 +13,8 @@
     require_once 'Bicycle.php';
 
     //Instance of new bike
-    $bike = new Bicycle;
+    $bike = new Bicycle('orange');
+    var_dump($bike);
 
     //Charge element of this bike
     $bike->setColor('blue');
@@ -28,8 +29,7 @@
     echo $bike->brake();
 
     //Instance of a new bike
-    $tornado = new Bicycle;
-    $tornado->setColor = "red";
+    $tornado = new Bicycle ('yellow');
     $tornado->setCurrentSpeed = 5;
     $tornado->forward();
     var_dump($tornado);
@@ -39,13 +39,11 @@
     require_once 'GarageCar.php';
 
     //Instance of new car
-    $car = new GarageCar();
-    $car->getColor='black';
+    $car = new GarageCar('black', 4, 60);
     $car->getCurrentSpeed = 30;
-    $car->getEnergy = 60;
     $car->getEnergyLevel = 45;
 
-    var_dump($car);
+    var_dump($car).'<br>';
 
     //Start and moving car
     echo $car->startUp().'<br>';
@@ -54,11 +52,11 @@
     //$car->getEnergyLevel =0;
     echo $car->startUp().'<br>';
 
-    echo $car->brake();
+    echo $car->brake().'<br>';
 
     //Instance new car
-    $car = new GarageCar();
-    var_dump($car);
+    $car2= new GarageCar('orange', 3, 60);
+    echo $car2->getColor();
 
 ?>
 

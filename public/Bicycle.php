@@ -9,7 +9,7 @@ class Bicycle
     private int $nbWheels= 2;
 
     //Constructor d'objet
-    public function __constructor(string $color)
+    public function __construct(string $color)
     {
         $this->color = $color;
     }
