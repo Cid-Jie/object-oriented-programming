@@ -2,7 +2,7 @@
 
 Page on visible on localhost
 
-/home/cidjie/wildcodeschool/POO/debuter/index.php:21:
+/home/index.php:21:
 object(Bicycle)[1]
   private string 'color' => string 'blue' (length=4)
   private bool 'garageDoor' => *uninitialized*
@@ -17,7 +17,7 @@ Brake !!!Brake !!!Brake !!!Brake !!!Brake !!!Brake !!!Brake !!!Brake !!!Brake !!
 Vitesse du vélo : 0 km/h.
 I'm stopped !
 
-/home/cidjie/wildcodeschool/POO/debuter/index.php:35:
+/home/index.php:35:
 object(Bicycle)[2]
   private string 'color' => *uninitialized*
   private bool 'garageDoor' => *uninitialized*
@@ -29,7 +29,7 @@ object(Bicycle)[2]
 
 Go !Stop now !
 
-/home/cidjie/wildcodeschool/POO/debuter/index.php:48:
+/home/index.php:48:
 object(GarageCar)[3]
   private int 'nbWheels' => int 4
   private int 'currentSpeed' => *uninitialized*
@@ -47,7 +47,7 @@ You can roll ... You can roll ... You can roll ... You can roll ... You can roll
 Go!
 You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped! You must stopped!You're out of gas :(
 
-/home/cidjie/wildcodeschool/POO/debuter/index.php:61:
+/home/cidjie/index.php:61:
 object(GarageCar)[4]
   private int 'nbWheels' => int 4
   private int 'currentSpeed' => *uninitialized*
