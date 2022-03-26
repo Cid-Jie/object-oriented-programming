@@ -17,7 +17,7 @@ class GarageCar
         $this->energy = $energy;
     }
     
-    //Get functions for each private variable
+    //Get functions for each private attribute
     public function getNbWheels():int
     {
         return $this->nbWheels;
