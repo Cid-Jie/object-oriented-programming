@@ -56,17 +56,17 @@ class Bicycle
 
     public function setGarageDoor():bool
     {
-        return $this->garageDoor;
+        $this->garageDoor = $garageDoor;
     }
 
     public function setNbSeats():int
     {
-        return $this->nbSeats;
+        $this->nbSeats = $nbSeats;
     }
 
     public function setNbWheels():string
     {
-        return $this->nbWheels;
+        $this->nbWheels = $nbWheels;
     }
 
     //Function to forward the bike

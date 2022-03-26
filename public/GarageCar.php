@@ -51,7 +51,7 @@ class GarageCar
      //Set function
      public function setNbWheels():int
      {
-         return $this->nbWheels;
+         $this->nbWheels = $nbWheels;
      }
  
      public function setCurrentSpeed():int
@@ -63,22 +63,22 @@ class GarageCar
  
      public function setColor():string
      {
-         return $this->color;
+         $this->color = $color;
      }
  
      public function setNbSeats():int
      {
-         return $this->nbSeats;
+         $this->nbSeats = $nbSeats;
      }
  
      public function setEnergy():string
      {
-         return $this->energy;
+         $this->energy = $energy;
      }
  
      public function setEnergyLevel():int
      {
-         return $this->energyLevel;
+         $this->energyLevel = $energyLevel;
      }
 
     //Function to start the car
@@ -88,8 +88,7 @@ class GarageCar
             return 'Go!';
         }else{
             return 'Refuel';
-        }
-        
+        }   
     }
 
     //Function to forward the car
