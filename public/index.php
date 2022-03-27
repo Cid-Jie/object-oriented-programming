@@ -14,45 +14,54 @@
 
     //Instance of new bike
     $bike = new Bicycle('orange');
+    $bike->setCurrentSpeed = 30;
     var_dump($bike);
 
     //Charge element of this bike
     $bike->setColor('blue');
-    $bike->setCurrentSpeed = 30;
     var_dump($bike);
 
     //Moving bike and stop it
-    echo $bike->forward();
+    echo $bike->forward().'<br>';
     echo '<br> Vitesse du vélo : '.$bike->getCurrentSpeed(). ' km/h.'.'<br>';
-    echo $bike->brake();
+    echo $bike->brake().'<br>';
     echo '<br> Vitesse du vélo : '.$bike->getCurrentSpeed(). ' km/h.'.'<br>';
-    echo $bike->brake();
+    echo $bike->brake().'<br>';
 
     //Instance of a new bike
     $tornado = new Bicycle ('yellow');
     $tornado->setCurrentSpeed = 5;
     $tornado->forward();
     var_dump($tornado);
-    echo $tornado->forward();
-    echo $tornado->stopNow();
+    
+    //Moving bike and stop it
+    echo $tornado->forward().'<br>';
+    echo '<br> Vitesse du tornado : '.$tornado->getCurrentSpeed(). ' km/h.'.'<br>';
+    echo $tornado->brake().'<br>';
+    echo '<br> Vitesse du tornado: '.$tornado->getCurrentSpeed(). ' km/h.'.'<br>';
+    echo $tornado->brake().'<br>';
+
 
     require_once 'GarageCar.php';
 
     //Instance of new car
-    $car = new GarageCar('black', 4, 60);
-    $car->getCurrentSpeed = 30;
-    $car->getEnergyLevel = 45;
-
+    $car = new GarageCar('black', 4, 'fuel');
+    $car->setCurrentSpeed = 30;
+    $car->setEnergyLevel = 45;
     var_dump($car).'<br>';
 
     //Start and moving car
     echo $car->startUp().'<br>';
-    echo $car->movingForward().'<br>';
+    echo $car->forward().'<br>';
 
-    //$car->getEnergyLevel =0;
-    echo $car->startUp().'<br>';
 
     echo $car->brake().'<br>';
+    //Moving bike and stop it
+    echo $tornado->forward().'<br>';
+    echo '<br> Vitesse du camion : '.$tornado->getCurrentSpeed(). ' km/h.'.'<br>';
+    echo $tornado->brake().'<br>';
+    echo '<br> Vitesse du camion: '.$tornado->getCurrentSpeed(). ' km/h.'.'<br>';
+    echo $tornado->brake().'<br>';
 
     //Instance new car
     $car2= new GarageCar('orange', 3, 60);

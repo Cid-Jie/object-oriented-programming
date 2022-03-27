@@ -25,11 +25,6 @@ class Bicycle
         return $this->currentSpeed;
     }
 
-    public function getGarageDoor():bool
-    {
-        return $this->garageDoor;
-    }
-
     public function getNbSeats():int
     {
         return $this->nbSeats;
@@ -54,19 +49,9 @@ class Bicycle
         
     }
 
-    public function setGarageDoor():bool
-    {
-        $this->garageDoor = $garageDoor;
-    }
-
-    public function setNbSeats():int
+    public function setNbSeats():void
     {
         $this->nbSeats = $nbSeats;
-    }
-
-    public function setNbWheels():string
-    {
-        $this->nbWheels = $nbWheels;
     }
 
     //Function to forward the bike
@@ -88,11 +73,4 @@ class Bicycle
         return $sentence;
     }
 
-    //Function to stop it now
-    public function stopNow():string
-    {
-       if($this->currentSpeed--){
-            return 'Stop now !';
-        }
-    }
 }

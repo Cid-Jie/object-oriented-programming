@@ -7,7 +7,7 @@ class GarageCar
     private string $color;
     private int $nbSeats;
     private string $energy;
-    private int $energyLevel;
+    private int $energyLevel=30;
 
     //Constructor
     public function __construct(string $color, int $nbSeats, string $energy)
@@ -49,34 +49,34 @@ class GarageCar
     }
 
      //Set function
-     public function setNbWheels():int
+     public function setNbWheels():void
      {
          $this->nbWheels = $nbWheels;
      }
  
-     public function setCurrentSpeed():int
+     public function setCurrentSpeed():void
      {
         if($currentSpeed >= 0){
             $this->currentSpeed= $currentSpeed;
         }
      }
  
-     public function setColor():string
+     public function setColor():void
      {
          $this->color = $color;
      }
  
-     public function setNbSeats():int
+     public function setNbSeats():void
      {
          $this->nbSeats = $nbSeats;
      }
  
-     public function setEnergy():string
+     public function setEnergy():void
      {
          $this->energy = $energy;
      }
  
-     public function setEnergyLevel():int
+     public function setEnergyLevel():void
      {
          $this->energyLevel = $energyLevel;
      }
@@ -84,7 +84,7 @@ class GarageCar
     //Function to start the car
     public function startUp():string
     {
-        if($this->getEnergyLevel > 0){
+        if($this->energyLevel > 0){
             return 'Go!';
         }else{
             return 'Refuel';
@@ -92,28 +92,21 @@ class GarageCar
     }
 
     //Function to forward the car
-    public function movingForward():string
+    public function forward():string 
     {
-        $sentence="";
-        while($this->getCurrentSpeed >= 0 && $this->getEnergyLevel >=0){
-            $this->getCurrentSpeed--;
-            $this->getEnergyLevel--;
-            $sentence .= "You can roll ... ";
-        }
-        $sentence .= "You must stopped !";
-        return $sentence;
+        $this->currentSpeed = 15;
+        return "Go !";
     }
 
     //Function to stop the car
     public function brake():string
     {
-        $sentence="";
-        while($this->getEnergyLevel > 0 || $this->getCurrentSpeed == 0){
-            $this->getEnergyLevel--;
-            $this->getCurrentSpeed--;
-            $sentence .= " You must stopped!";
+        $sentence = "";
+        while ($this->currentSpeed > 0){
+            $this->currentSpeed--;
+            $sentence .= "Brake !!!";
         }
-        $sentence .= 'You\'re out of gas :(';
+        $sentence .= "I'm stopped !";
         return $sentence;
     }
 }
